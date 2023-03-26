@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Eugene Chepkasov](https://up.htmlacademy.ru/htmlcss/36/user/2306205).
-* Наставник: [Виктория Никитина] (https://htmlacademy.ru/profile/id1217273).
+* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
