@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -20,9 +21,8 @@
 
     <nav class="main-navigation">
 
-      <form action="https://echo.htmlacademy.ru/courses" method="get" class="search-form">
-        <input type="text" name="header-search" class="search-form-field" placeholder="Поиск по сайту"
-          value="Поиск по сайту" required>
+      <form action="https://echo.htmlacademy.ru/courses" method="get" class="search-form" aria-label="Форма поиска по сайту">
+        <input type="text" name="header-search" class="search-form-field" placeholder="Поиск по сайту" required>
         <input type="submit" value="Найти" class="search-form-button">
       </form>
 
@@ -43,31 +43,37 @@
             </a>
 
             <div class="popover-wrap">
-
               <div class="popover">
 
                 <ul class="popover-list">
                   <li class="popover-item">
+                    <a href="#" class="popover-item-link">
                     <img src="images/product-selfie-1.jpg" alt="Любительская селфи-палка" width="39" height="43">
                     <p class="popover-description">Любительская <br>селфи-палка</p>
-                    <button class="popover-delete" type="button"></button>
+                  </a>
+                    <button class="popover-delete" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
                   </li>
+
                   <li class="popover-item">
+                    <a href="#" class="popover-item-link">
                     <img src="images/product-selfie-2.jpg" alt="Профессиональная селфи-палка" width="39" height="43">
-                    <p class="popover-description">Профессиональная селфи-палка</p>
-                    <button class="popover-delete" type="button"></button>
+                    <p class="popover-description">Профессиональная <br>селфи-палка</p>
+                  </a>
+                    <button class="popover-delete" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
                   </li>
                 </ul>
                 <div class="popover-sum">
                   <p class="popover-description">Товаров: <span> 2</span> </p>
                   <p class="popover-description">Сумма: <span> 2000 ₽</span> </p>
                 </div>
-                <div class="popover-open-cart">
-                  <a href="#" class="popover-link">Открыть корзину</a>
-                </div>
+
+                <a href="#" class="popover-link">Открыть корзину</a>
 
               </div>
-
             </div>
 
           </li>
@@ -76,7 +82,7 @@
       </div>
 
       <div class="menu catalog-menu">
-        <a href="#" class="menu-link menu-link-catalog">Каталог товаров</a>
+        <a href="catalog.html" class="menu-link-catalog">Каталог товаров</a>
 
         <nav class="inner-navigation">
           <ul class="inside-menu">
@@ -116,7 +122,7 @@
           <a href="#" class="menu-link">Доставка</a>
         </li>
         <li class="service-menu-item">
-          <a href="#" class="menu-link">Гарантия</a>
+          <a href="#" class="menu-link ">Гарантия</a>
         </li>
         <li class="service-menu-item">
           <a href="#" class="menu-link">Контакты</a>
@@ -135,6 +141,16 @@
     <section class="hero-block">
       <h2 class="visually-hidden">Популярные товары</h2>
 
+      <div class="slider-control">
+        <button type="button" class="slider-button prev-slide" name="prev-slide">
+          <span class="visually-hidden">Показать предыдущий экран слайдера</span>
+        </button>
+
+        <button type="button" class="slider-button" name="next-slide">
+          <span class="visually-hidden">Показать следующий экран слайдера</span>
+        </button>
+      </div>
+
       <div class="slider">
 
         <ul class="slider-list">
@@ -152,7 +168,7 @@
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
                 лазером, замаскированным под стандартную камеру.
               </p>
-              <a href="#" class="common-link ">Подробнее</a>
+              <a href="#" class="common-link">Подробнее</a>
               <div class="slider-ditales">
                 <h4 class="slider-ditales-title first-ditales-title">Дальность полета</h4>
                 <p class="slider-ditales-text first-ditales-text">800 м</p>
@@ -163,6 +179,23 @@
             </div>
           </li>
 
+          <ul class="slider-pagination">
+            <li>
+              <button type="button" class="bullet bullet-current">
+                <span class="visually-hidden">Показать первый экран слайдера</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="bullet">
+                <span class="visually-hidden">Показать второй экран слайдера</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="bullet">
+                <span class="visually-hidden">Показать третий экран слайдера</span>
+              </button>
+            </li>
+          </ul>
 
           <li class="slider-item visually-hidden">
             <div class="slider-img">
@@ -211,46 +244,18 @@
               </div>
             </div>
           </li>
-
-
-        </ul>
-
-        <ul class="slider-pagination">
-          <li>
-            <button type="button" class="bullet bullet-active">
-              <span class="visually-hidden">Показать первый экран слайдера</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="bullet">
-              <span class="visually-hidden">Показать второй экран слайдера</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="bullet">
-              <span class="visually-hidden">Показать третий экран слайдера</span>
-            </button>
-          </li>
         </ul>
 
       </div>
 
 
-      <div class="slider-control">
-        <button type="button" class="slider-button prev-slide" name="prev-slide">
-          <span class="visually-hidden">Показать предыдущий экран слайдера</span>
-        </button>
-
-        <button type="button" class="slider-button" name="next-slide">
-          <span class="visually-hidden">Показать следующий экран слайдера</span>
-        </button>
-      </div>
 
     </section>
 
     <!-- Catalogs headings -->
     <section class="heading-rubrics">
       <h2 class="visually-hidden">Рубрики каталога</h2>
+
       <ul class="headings">
         <li class="heading-items">
           <a href="#" class="heading-items-link">
@@ -391,7 +396,7 @@
         <p class="contacts-description">пн—пт: с 10:00 до 22:00<br>
           сб—вс: с 10:00 до 19:00 </p>
 
-        <a href="#" class="common-link about-us-link">Напишите нам</a>
+        <a href="#" class="common-link">Напишите нам</a>
       </section>
 
     </div>
@@ -401,12 +406,12 @@
     <!-- Subscribe -->
     <section class="subscribe">
       <div class="subscribe-block">
-        <h2 class="common-title subscribe-title">Подпишись на рассылку</h2>
+        <h2 class="common-title subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
           длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
 
-        <form action="https://echo.htmlacademy.ru/courses" method="get" class="subscribe-form">
-          <input type="email" placeholder="Ваш e-mail" class="subscribe-input" required>
+        <form action="https://echo.htmlacademy.ru/courses" method="get" class="subscribe-form" aria-label="Форма подписки">
+          <input type="email" placeholder="Ваш e-mail" class="subscribe-input" name="email" required>
           <button type="submit" class="subscribe-button">Подписаться</button>
         </form>
         <span class="subscribe-note">Это бесплатно</span>
@@ -418,11 +423,15 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-block">
-      <a href="index.html" class="footer-logo">
-        <img src="images/logo-device-yellow.svg" alt="Девайс" width="145" height="36">
-      </a>
 
-      <address class="footer-contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.
+      <div class="footer-logo-wrap">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo-device-yellow.svg" alt="Девайс" width="145" height="36">
+        </a>
+      </div>
+
+      <address class="footer-contacts">
+        Санкт-Петербург, набережная реки Карповки, 5, литера П.
       </address>
 
       <ul class="footer-menu">
@@ -433,12 +442,12 @@
           <a href="#" class="footer-link">Гарантия</a>
         </li>
         <li class="footer-menu-item">
-          <a href="#" class="footer-link">Доставка</a>
+          <a href="#" class="footer-link">Контакты</a>
         </li>
       </ul>
 
-      <a href="tel:78128121212" title="Нажми и звони +7 (812) 812-12-12" class="footer-phone-number">+7 (812)
-        812-12-12</a>
+      <a href="tel:78128121212" title="Нажми и звони +7 (812) 812-12-12" class="footer-phone-number">
+        Тел.: +7 (812) 812-12-12</a>
 
       <div class="footer-line"></div>
 
@@ -446,25 +455,25 @@
       <ul class="social-link-list">
 
         <li class="social-link-item">
-          <a href="#" class="social-link social-link-tg">
+          <a href="https://t.me/htmlacademy" class="social-link social-link-tg">
             <span class="visually-hidden">Наш Телеграм</span>
           </a>
         </li>
 
         <li class="social-link-item">
-          <a href="#" class="social-link social-link-youtube">
+          <a href="https://www.youtube.com/user/htmlacademyru" class="social-link social-link-youtube">
             <span class="visually-hidden">Наш канал в Ютубе</span>
           </a>
         </li>
 
         <li class="social-link-item">
-          <a href="#" class="social-link social-link-twitter">
+          <a href="https://twitter.com/htmlacademy_ru" class="social-link social-link-twitter">
             <span class="visually-hidden">Наш Твиттер</span>
           </a>
         </li>
       </ul>
 
-      <a href="#" class="logo-html-academy">
+      <a href="https://htmlacademy.ru/" class="logo-html-academy">
         <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="currentColor" />
           <path
@@ -504,35 +513,52 @@
     </div>
   </footer>
 
-  <div class="modal-container" style="display: none;">
+  <div class="modal-container"  style="display: none;">
     <div class="modal-delivery">
       <button type="button" class="close-modal">
-        <span class="visually-hidden">Закрыть</span>
+        <span class="visually-hidden">Закрыть модальное окно</span>
       </button>
       <h2 class="common-title">Доставка под заказ</h2>
-      <form action="https://echo.htmlacademy.ru/courses" method="get" >
+
+      <form action="https://echo.htmlacademy.ru/courses" method="get" aria-label="Форма доставки товара под заказ">
 
         <ul class="modal-form">
-          <li>
+          <li class="item-modal-name">
             <label for="name-modal-form" class="modal-title">Ваше имя:</label>
-            <input type="text" id="name-modal-form" class="input-modal name-modal-form" placeholder="Введите имя" required>
+            <input type="text" name="name" id="name-modal-form" class="input-modal name-modal-form"
+              placeholder="Введите имя" required>
           </li>
-          <li>
+          <li class="item-modal-email">
             <label for="email-modal-form" class="modal-title">Ваш e-mail:</label>
-            <input type="email" id="email-modal-form" class="input-modal email-modal-form" placeholder="Введите почту" required>
+            <input type="email" name="email" id="email-modal-form" class="input-modal email-modal-form"
+              placeholder="Введите почту" required>
+            <span class="modal-email-error">Забавный у вас адрес</span>
           </li>
           <li>
-            <label for="good-modal-form" class="modal-title">Что нужно привезти:</label>
-            <input type="text" id="good-modal-form" class="input-modal good-modal-form" placeholder="В свободной форме" required>
+            <label for="product-modal-form" class="modal-title">Что нужно привезти:</label>
+            <input type="text" name="product" id="product-modal-form" class="input-modal product-modal-form"
+              placeholder="В свободной форме" required>
           </li>
           <li>
-            <label for="amount-modal-form" class="modal-title">Количество:</label>
-            <input type="number" id="amount-modal-form" class="input-modal amount-modal-form"
-              placeholder="1">
+            <label for="amount-modal-form" class="modal-title">Количество:
+              <a class="item-modal-amount">
+                <span class="tooltip-amount" role="tooltip">Постараемся найти, сколько нужно. Привезём сколько получится
+                  по требованиям к провозу багажа.</span>
+              </a>
+            </label>
+            <div class="modal-buttons-amount">
+              <button type="button" class="down-amount">
+                <span class="visually-hidden">Добавить количество товаров</span>
+              </button>
+              <input type="number" name="amount" id="amount-modal-form" class="input-modal amount-modal-form" value="1"
+                min="1" required>
+              <button type="button" class="add-amount">
+                <span class="visually-hidden">Уменьшить количество товаров</span>
+              </button>
+            </div>
           </li>
         </ul>
-        <button type="submit" class="common-link modal-buttton">Отправить</button>
-
+        <button type="submit" class="common-link filters-button">Отправить</button>
       </form>
     </div>
   </div>
