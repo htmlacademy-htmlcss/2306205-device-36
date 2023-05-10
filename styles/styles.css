@@ -1763,6 +1763,12 @@ input.search-form-field::placeholder {
   line-height: 20px;
 }
 
+.filter-list-item input:focus + .checkbox-lable::before,
+.filter-list-item input:focus + .radio-lable::before {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .input-lable {
   padding: 0 0 0 36px;
   color: rgba(0, 0, 0, 1);
